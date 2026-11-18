@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Join a contest — Outdo</title>
+<title>Join a contest — Pact</title>
 <style>
   :root { --orange: #FF5A1F; --ink: #1c1c1e; --muted: #5a5a5e; --card: #fff4ef; }
   * { box-sizing: border-box; }
@@ -24,8 +24,8 @@
 </head>
 <body>
   <div class="band">
-    <h1>You've been invited to a contest on Outdo</h1>
-    <p>Outdo: Beat Your Friends — turn anything into a contest</p>
+    <h1>You've been invited to a contest on Pact</h1>
+    <p>Pact — Make a pact.</p>
   </div>
   <main>
     <div id="withCode">
@@ -34,11 +34,11 @@
         <div class="code" id="codeText">····</div>
         <button id="copyBtn" type="button">Copy code</button>
       </div>
-      <a class="btn" id="openBtn" href="#">Open in Outdo</a>
-      <p class="fallback">Don't have Outdo yet? Install it from the App Store, then tap your invite link again — or open the app and enter code <strong id="codeInline">····</strong>.</p>
+      <a class="btn" id="openBtn" href="#">Open in Pact</a>
+      <p class="fallback">Don't have Pact yet? Install it from the App Store, then tap your invite link again — or open the app and enter code <strong id="codeInline">····</strong>.</p>
     </div>
     <div id="noCode" class="hidden">
-      <p class="fallback">This invite link is missing its code. Ask the contest's manager to send you a fresh invite link — or, if they gave you a code, open Outdo and enter it there to join.</p>
+      <p class="fallback">This invite link is missing its code. Ask the contest's manager to send you a fresh invite link — or, if they gave you a code, open Pact and enter it there to join.</p>
     </div>
   </main>
   <script>
@@ -48,7 +48,7 @@
         code = code.trim().toUpperCase();
         document.getElementById('codeText').textContent = code;
         document.getElementById('codeInline').textContent = code;
-        document.getElementById('openBtn').href = 'outdo://join/' + encodeURIComponent(code);
+        document.getElementById('openBtn').href = 'pact://join/' + encodeURIComponent(code);
         document.getElementById('copyBtn').addEventListener('click', function () {
           var btn = this;
           function done() { btn.textContent = 'Copied ✓'; setTimeout(function () { btn.textContent = 'Copy code'; }, 2000); }
